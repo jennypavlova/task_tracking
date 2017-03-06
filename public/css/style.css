@@ -1,0 +1,13 @@
+.panel-inprogress .panel-heading {
+  background-color: #86bc40;
+}
+.panel-review .panel-heading {
+  background-color: #fb7653;
+}
+.panel-waiting .panel-heading {
+  background-color: #65a6ff;
+}
+.panel-heading .panel-title {
+  color: #fff;
+  text-transform: uppercase;
+}

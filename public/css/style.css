@@ -13,6 +13,7 @@
 .panel-heading .panel-title {
   color: #fff;
   text-transform: uppercase;
+  display: inline-block;
 }
 .lists {
   margin-top: 0px;

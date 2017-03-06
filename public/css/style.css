@@ -1,3 +1,6 @@
+.main-nav {
+  margin-bottom: 0px;
+}
 .panel-inprogress .panel-heading {
   background-color: #86bc40;
 }
@@ -10,4 +13,10 @@
 .panel-heading .panel-title {
   color: #fff;
   text-transform: uppercase;
+}
+.lists {
+  margin-top: 0px;
+}
+.main_title {
+  margin-bottom: 10px;
 }

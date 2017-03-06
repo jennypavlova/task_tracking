@@ -2,11 +2,12 @@
 <html>
   <head>
     <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="../libs/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="../css/style.css">
   </head>
   <body>
-    <nav class="navbar navbar-inverse" role="navigation">
+    <nav class="main-nav navbar navbar-inverse" role="navigation">
       <div class="container-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
@@ -28,8 +29,23 @@
         </div><!-- /.navbar-collapse -->
       </div>
     </nav>
+<!--     <ul class="nav navbar-static-top nav-pills nav-stacked col-md-3">
+      <li role="presentation"><a href="#"><h3>Lists</h3></a></li>
+      <li role="presentation"><a href="#">My Tasks</a></li>
+      <li role="presentation"><a href="#">Check list</a></li>
+      <li role="presentation"><a href="#">Watching</a></li>
+      <li role="presentation"><a href="#">Team Tasks</a></li>
+    </ul> -->
+    <div class="col-md-3  nav navbar-static-top list-group">
+      <h3 class="list-group-item lists">Lists</h3>
+      <button type="button" class="list-group-item">My Tasks</button>
+      <button type="button" class="list-group-item">Check list</button>
+      <button type="button" class="list-group-item">Watching</button>
+      <button type="button" class="list-group-item">Team Tasks</button>
+    </div>
     <div class="container-fluid">
-      <div class="col-md-4 panel-waiting">
+      <h2 class="list-group-item lists main_title">Tasks Board</h2>
+      <div class="col-md-3 panel-waiting">
         <div class="panel panel-default">
           <div class="panel-heading">
             <h3 class="panel-title">Waiting</h3>
@@ -39,7 +55,7 @@
           </div>
         </div>
       </div>
-      <div class="col-md-4 panel-inprogress">
+      <div class="col-md-3 panel-inprogress">
         <div class="panel panel-default">
           <div class="panel-heading">
             <h3 class="panel-title">In progress</h3>
@@ -49,7 +65,7 @@
           </div>
         </div>
       </div>
-      <div class="col-md-4 panel-review">
+      <div class="col-md-3 panel-review">
         <div class="panel panel-default">
           <div class="panel-heading">
             <h3 class="panel-title">Review/Confirm</h3>
@@ -59,6 +75,7 @@
           </div>
         </div>
       </div>
+    </div>
     <!-- jQuery -->
     <script src="../libs/jquery/dist/jquery.min.js"></script>
     <!-- Bootstrap -->

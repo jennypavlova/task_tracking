@@ -30,13 +30,6 @@
         </div><!-- /.navbar-collapse -->
       </div>
     </nav>
-<!--     <ul class="nav navbar-static-top nav-pills nav-stacked col-md-3">
-      <li role="presentation"><a href="#"><h3>Lists</h3></a></li>
-      <li role="presentation"><a href="#">My Tasks</a></li>
-      <li role="presentation"><a href="#">Check list</a></li>
-      <li role="presentation"><a href="#">Watching</a></li>
-      <li role="presentation"><a href="#">Team Tasks</a></li>
-    </ul> -->
     <div class="col-md-3  nav navbar-static-top list-group">
       <h3 class="list-group-item lists">Lists</h3>
       <button type="button" class="list-group-item">
@@ -68,7 +61,18 @@
              <i class="panel-title fa fa-hourglass-end" aria-hidden="true"></i> <h3 class="panel-title">Waiting</h3>
           </div>
           <div class="panel-body">
-            Basic panel example
+            <div class="waiting-content">
+              <script id="waiting" type="text/x-handlebars-template">
+                  <!-- <p>{{{comment}}}</p> -->
+                {{#if task.length}}
+                  {{#each task}}
+                  <div>
+                    <span>{{description}} {{image}} </span>
+                  </div>
+                  {{/each}}
+                {{/if}}
+              </script>
+            </div>
           </div>
         </div>
       </div>
@@ -78,6 +82,18 @@
             <h3 class="panel-title"><i class="fa fa-cogs" aria-hidden="true"></i> In progress</h3>
           </div>
           <div class="panel-body">
+          <div class="progress-content">
+            <script id="in-progress" type="text/x-handlebars-template">
+                <!-- <p>{{{comment}}}</p> -->
+              {{#if task.length}}
+                {{#each task}}
+                <div>
+                  <span>{{description}} {{image}} </span>
+                </div>
+                {{/each}}
+              {{/if}}
+            </script>
+          </div>
             Basic panel example
           </div>
         </div>
@@ -88,7 +104,17 @@
             <h3 class="panel-title"> <i class="fa fa-check" aria-hidden="true"></i> Review/Confirm</h3>
           </div>
           <div class="panel-body">
-            Basic panel example
+            <div class="review-content"></div>
+              <script id="review" type="text/x-handlebars-template">
+                  <!-- <p>{{{comment}}}</p> -->
+                {{#if task.length}}
+                  {{#each task}}
+                  <div>
+                    <span>{{description}} {{image}} </span>
+                  </div>
+                  {{/each}}
+                {{/if}}
+              </script>
           </div>
         </div>
       </div>
@@ -97,5 +123,10 @@
     <script src="../libs/jquery/dist/jquery.min.js"></script>
     <!-- Bootstrap -->
     <script src="../libs/bootstrap/dist/js/bootstrap.min.js"></script>
+    <!-- Handlebars -->
+    <script src="../libs/handlebars/handlebars.min.js"></script>
+    <!-- <script src="../libs/handlebars/handlebars.runtime.js"></script> -->
+    <script src="../js/app.js" type="text/javascript" charset="utf-8"></script>
+
   </body>
 </html>

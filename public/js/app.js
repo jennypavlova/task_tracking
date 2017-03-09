@@ -17,17 +17,13 @@ var data = {
 };
 $("#waiting-content").append(template(data));
 $("#add-task-waiting").on( "click", function() {
-  console.log( "TASKKKKK" );
   $("#waiting-content").append('<div class="add-layout"><input type="text" class="col-md-8" id="waiting_input" placeholder="Input field"><button type="submit" class="add_waiting col-md-offset-1 col-md-3">ADD</button></div>');  $(".add_waiting").on( "click", function() {
-    console.log( "NEW TASKKKKK" );
     var input_string = $('#waiting_input').val();
     // data = JSON.parse( data );
     // Add new key value pair "myData":"Helo World" to object
     data.task.push({description: input_string, image: "../img/profile.png" });
     JSON.stringify( data );
     // Log to console:
-    console.log( data );
-
     $("#waiting-content").html('');
     $("#waiting-content").append(template(data));
 
@@ -53,18 +49,14 @@ var progress = {
 };
 $("#progress-content").append(template(progress));
 $("#add-task-progress").on( "click", function() {
-  console.log( "TASKKKKK" );
   $("#progress-content").append('<div class="add-layout"><input type="text" class="col-md-8" id="progress_input" placeholder="Input field"><button type="submit" class="add_progress col-md-offset-1 col-md-3">ADD</button></div>');  $(".add_progress").on( "click", function() {
-    console.log( "NEW TASKKKKK" );
     var input_string = $('#progress_input').val();
     // data = JSON.parse( data );
     // Add new key value pair "myData":"Helo World" to object
     progress.task.push({description: input_string, image: "../img/profile.png" });
     JSON.stringify( progress );
     // Log to console:
-    console.log( progress );
-
-    $("#progress-content").html('');
+        $("#progress-content").html('');
     $("#progress-content").append(template(progress));
 
   });
@@ -88,19 +80,14 @@ var review = {
 };
 $("#review-content").append(template(review));
 $("#add-task-review").on( "click", function() {
-  console.log( "TASKKKKK" );
   $("#review-content").append('<div class="add-layout"><input type="text" class="col-md-8" id="review_input" placeholder="Input field"><button type="submit" class="add_review col-md-offset-1 col-md-3">ADD</button></div>');  $(".add_review").on( "click", function() {
-    console.log( "NEW TASKKKKK" );
     var input_string = $('#review_input').val();
     // data = JSON.parse( data );
     // Add new key value pair "myData":"Helo World" to object
     review.task.push({description: input_string, image: "../img/profile.png" });
     JSON.stringify( review );
     // Log to console:
-    console.log( review );
-
-    $("#review-content").html('');
+      $("#review-content").html('');
     $("#review-content").append(template(review));
-
   });
 });

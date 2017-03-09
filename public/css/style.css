@@ -66,3 +66,15 @@
 .merged {
   text-decoration: line-through;
 }
+#waiting-badge {
+  color: #65a6ff;
+  background-color: #fff;
+}
+#progress-badge {
+  color: #86bc40;
+  background-color: #fff;
+}
+#review-badge {
+  color: #fb7653;
+  background-color: #fff;
+}

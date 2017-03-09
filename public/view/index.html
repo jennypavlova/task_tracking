@@ -58,16 +58,18 @@
       <div class="col-md-3 panel-waiting">
         <div class="panel panel-default">
           <div class="panel-heading">
-             <i class="panel-title fa fa-hourglass-end" aria-hidden="true"></i> <h3 class="panel-title">Waiting</h3>
+             <i class="panel-title fa fa-hourglass-end" aria-hidden="true"></i>
+             <h3 class="panel-title">Waiting</h3>
+             <span id="waiting-badge" class="badge"></span>
           </div>
           <div class="panel-body">
             <div id="waiting-content" class="content-layout">
               <script id="waiting" type="text/x-handlebars-template">
-                  <!-- <p>{{{comment}}}</p> -->
                 {{#if task.length}}
                   {{#each task}}
                   <div class="content">
-                    <span>{{description}}</span>
+                    <img class="label-picture" src="{{label}}">
+                    <span class="description">{{description}}</span>
                     <img class="profile-picture" src="{{image}}">
                   </div>
                   {{/each}}
@@ -82,15 +84,16 @@
         <div class="panel panel-default">
           <div class="panel-heading">
             <h3 class="panel-title"><i class="fa fa-cogs" aria-hidden="true"></i> In progress</h3>
+            <span id="progress-badge" class="badge"></span>
           </div>
           <div class="panel-body">
             <div id="progress-content" class="content-layout">
               <script id="in-progress" type="text/x-handlebars-template">
-                  <!-- <p>{{{comment}}}</p> -->
                 {{#if task.length}}
                   {{#each task}}
                   <div class="content">
-                    <span>{{description}}</span>
+                    <img class="label-picture" src="{{label}}">
+                    <span class="description">{{description}}</span>
                     <img class="profile-picture" src="{{image}}">
                   </div>
                   {{/each}}
@@ -105,15 +108,21 @@
         <div class="panel panel-default">
           <div class="panel-heading">
             <h3 class="panel-title"> <i class="fa fa-check" aria-hidden="true"></i> Review/Confirm</h3>
+            <span id="review-badge" class="badge"></span>
           </div>
           <div class="panel-body">
             <div id="review-content" class="content-layout"></div>
             <script id="review" type="text/x-handlebars-template">
-                <!-- <p>{{{comment}}}</p> -->
               {{#if task.length}}
                 {{#each task}}
                 <div class="content">
-                  <span>{{description}}</span>
+                  <img class="label-picture" src="{{label}}">
+                  {{#if merged}}
+                    <span class="merged description">{{description}}</span>
+                  {{else}}
+                    <img class="label-picture" src="{{label}}">
+                    <span class="description">{{description}}</span>
+                  {{/if}}
                   <img class="profile-picture" src="{{image}}">
                 </div>
                 {{/each}}

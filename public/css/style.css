@@ -53,3 +53,16 @@
   font-weight: bold;
   float: left;
 }
+.badge {
+  float: right;
+}
+.label-picture {
+  left: 0;
+  position: absolute;
+}
+.description {
+  padding-left: 10px;
+}
+.merged {
+  text-decoration: line-through;
+}

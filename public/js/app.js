@@ -3,7 +3,6 @@ function counting(len){
   for(var i = 0; i < len; i++){
     counter += 1;
   }
-  console.log(counter);
 }
 var waiting = $("#waiting").html();
 var template = Handlebars.compile(waiting);
@@ -117,11 +116,8 @@ $("#waiting-content").append(template(data));
 $("#add-task-waiting").on( "click", function() {
   $("#waiting-content").append('<div class="add-layout"><input type="text" class="col-md-8" id="waiting_input" placeholder="Input field"><button type="submit" class="add_waiting col-md-offset-1 col-md-3">ADD</button></div>');  $(".add_waiting").on( "click", function() {
     var input_string = $('#waiting_input').val();
-    // data = JSON.parse( data );
-    // Add new key value pair "myData":"Helo World" to object
     data.task.push({description: input_string, image: "../img/profile.png", label: "../img/green_label.png" });
     JSON.stringify( data );
-    // Log to console:
     $("#waiting-content").html('');
     counting(data.task.length);
     var newValue = 0;
@@ -185,7 +181,6 @@ $("#add-task-progress").on( "click", function() {
 
     progress.task.push({description: input_string, image: "../img/profile.png", label: "../img/green_label.png" });
     JSON.stringify( progress );
-    // Log to console:
     $("#progress-content").html('');
     counting(progress.task.length);
     var newValue = 0;
@@ -197,7 +192,7 @@ $("#add-task-progress").on( "click", function() {
 });
 var review = $("#review").html();
 var template = Handlebars.compile(review);
-// var review = $.getJSON("review.json");
+
 var review = {
   status: "review",
   task: [
@@ -299,7 +294,6 @@ var review = {
   ]
 };
 
-console.log(review);
 counting(review.task.length);
 $("#review-badge").append(counter);
 $("#review-content").append(template(review));
@@ -317,6 +311,5 @@ $("#add-task-review").on( "click", function() {
   });
 });
 if(review.task.merged == "true"){
-  console.log(review.task.merged);
   $(".description").addClass("merged");
 }

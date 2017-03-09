@@ -21,3 +21,14 @@
 .main_title {
   margin-bottom: 10px;
 }
+.profile-picture {
+  right: 0;
+  position: absolute;
+}
+.content {
+  margin-top: 5px;
+  padding-bottom: 10px;
+}
+.content-layout {
+  position: relative;
+}

@@ -61,13 +61,14 @@
              <i class="panel-title fa fa-hourglass-end" aria-hidden="true"></i> <h3 class="panel-title">Waiting</h3>
           </div>
           <div class="panel-body">
-            <div class="waiting-content">
+            <div id="waiting-content" class="content-layout">
               <script id="waiting" type="text/x-handlebars-template">
                   <!-- <p>{{{comment}}}</p> -->
                 {{#if task.length}}
                   {{#each task}}
-                  <div>
-                    <span>{{description}} {{image}} </span>
+                  <div class="content">
+                    <span>{{description}}</span>
+                    <img class="profile-picture" src="{{image}}">
                   </div>
                   {{/each}}
                 {{/if}}
@@ -82,19 +83,19 @@
             <h3 class="panel-title"><i class="fa fa-cogs" aria-hidden="true"></i> In progress</h3>
           </div>
           <div class="panel-body">
-          <div class="progress-content">
-            <script id="in-progress" type="text/x-handlebars-template">
-                <!-- <p>{{{comment}}}</p> -->
-              {{#if task.length}}
-                {{#each task}}
-                <div>
-                  <span>{{description}} {{image}} </span>
-                </div>
-                {{/each}}
-              {{/if}}
-            </script>
-          </div>
-            Basic panel example
+            <div id="progress-content" class="content-layout">
+              <script id="in-progress" type="text/x-handlebars-template">
+                  <!-- <p>{{{comment}}}</p> -->
+                {{#if task.length}}
+                  {{#each task}}
+                  <div class="content">
+                    <span>{{description}}</span>
+                    <img class="profile-picture" src="{{image}}">
+                  </div>
+                  {{/each}}
+                {{/if}}
+              </script>
+            </div>
           </div>
         </div>
       </div>
@@ -104,13 +105,14 @@
             <h3 class="panel-title"> <i class="fa fa-check" aria-hidden="true"></i> Review/Confirm</h3>
           </div>
           <div class="panel-body">
-            <div class="review-content"></div>
+            <div id="review-content" class="content-layout"></div>
               <script id="review" type="text/x-handlebars-template">
                   <!-- <p>{{{comment}}}</p> -->
                 {{#if task.length}}
                   {{#each task}}
-                  <div>
-                    <span>{{description}} {{image}} </span>
+                  <div class="content">
+                    <span>{{description}}</span>
+                    <img class="profile-picture" src="{{image}}">
                   </div>
                   {{/each}}
                 {{/if}}

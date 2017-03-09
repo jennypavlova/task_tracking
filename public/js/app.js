@@ -6,16 +6,16 @@ var data = {
     {
       description: "Unable to load game-request session",
       name: "",
-      image: "",
+      image: "../img/profile.png",
     },
     {
       description: "Fullscreeen btn doesn't spread to full",
       name: "",
-      image: "",
+      image: "../img/profile.png"
     }
   ]
 };
-$(".waiting-content").append(template(data));var source = $("#waiting").html();
+$("#waiting-content").append(template(data));var source = $("#waiting").html();
 var progress = $("#in-progress").html();
 var template = Handlebars.compile(progress);
 var progress = {
@@ -24,16 +24,16 @@ var progress = {
     {
       description: "Support multiple Reels Definitior",
       name: "",
-      image: "",
+      image: "../img/profile4.png",
     },
     {
       description: "Autoplay disables buttombar bur",
       name: "",
-      image: "",
+      image: "../img/profile5.png",
     }
   ]
 };
-$(".progress-content").append(template(progress));
+$("#progress-content").append(template(progress));
 var review = $("#review").html();
 var template = Handlebars.compile(review);
 var review = {
@@ -42,13 +42,13 @@ var review = {
     {
       description: "Use reel positions from backend",
       name: "",
-      image: "",
+      image: "../img/profile.png",
     },
     {
       description: "Stop reels at correct position",
       name: "",
-      image: "",
+      image: "../img/profile.png",
     }
   ]
 };
-$(".review-content").append(template(review));
+$("#review-content").append(template(review));

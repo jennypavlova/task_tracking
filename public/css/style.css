@@ -49,6 +49,7 @@
   border:none;
 }
 .add-task {
+  margin-top: 20px;
   color: #62A333;
   font-weight: bold;
   float: left;

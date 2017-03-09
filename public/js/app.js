@@ -119,7 +119,7 @@ $("#add-task-waiting").on( "click", function() {
     var input_string = $('#waiting_input').val();
     // data = JSON.parse( data );
     // Add new key value pair "myData":"Helo World" to object
-    data.task.push({description: input_string, image: "../img/profile.png" });
+    data.task.push({description: input_string, image: "../img/profile.png", label: "../img/green_label.png" });
     JSON.stringify( data );
     // Log to console:
     $("#waiting-content").html('');
@@ -183,7 +183,7 @@ $("#add-task-progress").on( "click", function() {
   $("#progress-content").append('<div class="add-layout"><input type="text" class="col-md-8" id="progress_input" placeholder="Input field"><button type="submit" class="add_progress col-md-offset-1 col-md-3">ADD</button></div>');  $(".add_progress").on( "click", function() {
     var input_string = $('#progress_input').val();
 
-    progress.task.push({description: input_string, image: "../img/profile.png" });
+    progress.task.push({description: input_string, image: "../img/profile.png", label: "../img/green_label.png" });
     JSON.stringify( progress );
     // Log to console:
     $("#progress-content").html('');
@@ -306,7 +306,7 @@ $("#review-content").append(template(review));
 $("#add-task-review").on( "click", function() {
   $("#review-content").append('<div class="add-layout"><input type="text" class="col-md-8" id="review_input" placeholder="Input field"><button type="submit" class="add_review col-md-offset-1 col-md-3">ADD</button></div>');  $(".add_review").on( "click", function() {
     var input_string = $('#review_input').val();
-    review.task.push({description: input_string, image: "../img/profile.png" });
+    review.task.push({description: input_string, image: "../img/profile.png", label: "../img/green_label.png" });
     JSON.stringify( review );
     $("#review-content").html('');
     counting(review.task.length);

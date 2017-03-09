@@ -32,3 +32,11 @@
 .content-layout {
   position: relative;
 }
+.add-layout {
+  padding-top: 15px;
+  margin-top: 5px;
+}
+.add_waiting {
+  background-color: #72AF47;
+  border:none;
+}

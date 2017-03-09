@@ -15,7 +15,25 @@ var data = {
     }
   ]
 };
-$("#waiting-content").append(template(data));var source = $("#waiting").html();
+$("#waiting-content").append(template(data));
+$(".add-task").on( "click", function() {
+  console.log( "TASKKKKK" );
+  $("#waiting-content").append('<span class="add-layout"><input type="text" class="col-md-8" id="waiting_input" placeholder="Input field"><button type="submit" class="add_waiting col-md-offset-1 col-md-3">ADD</button></span>');  $(".add_waiting").on( "click", function() {
+    console.log( "NEW TASKKKKK" );
+    var input_string = $('#waiting_input').val();
+    // data = JSON.parse( data );
+    // Add new key value pair "myData":"Helo World" to object
+    data.task.push({description: input_string, image: "../img/profile.png" });
+    JSON.stringify( data );
+    // Log to console:
+    console.log( data );
+
+    $("#waiting-content").html('');
+    $("#waiting-content").append(template(data));
+
+  });
+});
+
 var progress = $("#in-progress").html();
 var template = Handlebars.compile(progress);
 var progress = {

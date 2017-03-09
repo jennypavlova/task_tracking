@@ -79,6 +79,12 @@ var data = {
       label: "../img/green_label.png"
     },
     {
+      description: "Game not scaled for iPhone",
+      name: "",
+      image: "../img/profile.png",
+      label: "../img/green_label.png"
+    },
+    {
       description: "Debug pause button doesn't",
       name: "",
       image: "../img/profile.png",
